@@ -1,7 +1,7 @@
 >记录自己搭建 shadowsocks 的过程
 
 ## 购买VPS
-我是在[搬瓦工](https://bwh1.net/)上购买的最VPS,每个月18元左右，搭建一个ss服务器还是绰绰有余的，每个月也有1000G的流量，根本用不完。[这是教程](byvps.md)，当然你也可以换其他的。
+我是在[搬瓦工](https://bwh1.net/)上购买的最VPS,每个月18元左右，搭建一个ss服务器还是绰绰有余的，每个月也有1000G的流量，根本用不完。[这是教程](byvps.md)，当然你也可以换其他的。
 
 搬瓦工默认安装的是CentOS，我把它换成了 ubuntu 16.04，毕竟比较熟悉。
 
@@ -15,7 +15,7 @@ sudo apt update
 sudo apt install shadowsocks-libev
 ```
 
-安装成功后会添加 ss-server 命令，接着就配置.json 文件：
+安装成功后会添加 ss-server 命令，接着就配置.json 文件：
 
 ```bash
 vim /etc/shadowsocks-libev/config.json
