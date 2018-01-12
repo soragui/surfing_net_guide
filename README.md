@@ -30,7 +30,7 @@ vim /etc/shadowsocks-libev/config.json
     "local_port":1080,
     "password":"focobguph",
     "timeout":60,
-    "method":"chacha20-ietf-poly1305"
+    "method":"aes-256-cfb"
 }
 ```
 最后用如下命令启动服务：
@@ -45,3 +45,6 @@ systemctl enable shadowsocks-libev.service
 ```bash
 systemctl status shadowsocks-libev.service
 ```
+
+## 结语
+如果发现任何错误或建议，欢迎提出PR请求。
