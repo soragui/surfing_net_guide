@@ -1,5 +1,12 @@
 >记录自己搭建 shadowsocks 的过程
 
+## 目录
+
+- [购买VPS](#%E8%B4%AD%E4%B9%B0vps)
+- [安装 shadowsocks server](#%E5%AE%89%E8%A3%85-shadowsocks-server)
+- [Ubuntu 安装 shadowsocks client](#ubuntu-%E5%AE%89%E8%A3%85-shadowsocks-client)
+- [结语](#%E7%BB%93%E8%AF%AD)
+
 ## 购买VPS
 我是在[搬瓦工](https://bwh1.net/)上购买的最VPS,每个月18元左右，搭建一个ss服务器还是绰绰有余的，每个月也有1000G的流量，根本用不完。[这是教程](byvps.md)，当然你也可以换其他的。
 
