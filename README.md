@@ -5,7 +5,7 @@
 - [购买VPS](#%E8%B4%AD%E4%B9%B0vps)
 - [安装 shadowsocks server](#%E5%AE%89%E8%A3%85-shadowsocks-server)
 - [Ubuntu 安装 shadowsocks client](#ubuntu-%E5%AE%89%E8%A3%85-shadowsocks-client)
-- [服务端使用 TCP BBR 优化网络速度](#服务端使用 TCP BBR 优化网络速度)
+- [服务端使用 TCP BBR 优化网络速度](#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8-tcp-bbr-%E4%BC%98%E5%8C%96%E7%BD%91%E7%BB%9C%E9%80%9F%E5%BA%A6)
 - [结语](#%E7%BB%93%E8%AF%AD)
 
 ## 购买VPS
