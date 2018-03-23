@@ -5,6 +5,7 @@
 - [购买VPS](#%E8%B4%AD%E4%B9%B0vps)
 - [安装 shadowsocks server](#%E5%AE%89%E8%A3%85-shadowsocks-server)
 - [Ubuntu 安装 shadowsocks client](#ubuntu-%E5%AE%89%E8%A3%85-shadowsocks-client)
+- [服务端使用 TCP BBR 优化网络速度](#服务端使用 TCP BBR 优化网络速度)
 - [结语](#%E7%BB%93%E8%AF%AD)
 
 ## 购买VPS
@@ -94,6 +95,48 @@ socks5://127.0.0.1:1080
 ```
 
 你可以配置系统或浏览器代理，然后就可以尽情的GOOGLE了。
+
+## 服务端使用 TCP BBR 优化网络速度
+>TCP BBR(Bottleneck Bandwidth and RTT) 是谷歌开发的一种TCP阻塞控制算法。[根据谷歌的描述](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=0f8782ea14974ce992618b55f0c041ef43ed0b78)，此算法可以不仅可以提高带宽，还可以降低延迟。
+
+首先使用如下命令来检查一下系统可用的阻塞控制算法：
+```bash
+sysctl net.ipv4.tcp_available_congestion_control
+```
+输出结果一般如下所示：
+```bash
+net.ipv4.tcp_available_congestion_control = cubic reno
+```
+然后通过如下命令检查当前所用的 TCP 阻塞算法：
+```bash
+sysctl net.ipv4.tcp_congestion_control
+```
+输出的结果是你系统正在使用的算法，如果是 bbr 那么你可以跳过此段了，如果不是，继续往下看。
+
+接着需要检查一下你的内核版本是不是高于4.9：
+```bash
+uname -r
+```
+如果输出结果比4.9版本高，那么可以跳过此步骤，如果不是 16.04 可以使用如下命令升级内核：
+```bash
+sudo apt update
+sudo apt install --install-recommends linux-generic-hwe-16.04
+```
+
+好了，到了最后一步很简单使用如下命令修改 sysctl.conf 文件：
+```bash
+sudo vim /etc/sysctl.conf
+```
+添加如下两行即可：
+```bash
+net.core.default_qdisc=fq
+net.ipv4.tcp_congestion_control=bbr
+```
+保持退出后，使用如下命令重新加载：
+```bash
+sudo sysctl -p
+```
+好了，你现在可以检查一下系统使用的阻塞算法了。如果是 bbr，那么就加速成功了。
 
 ## 结语
 如果发现任何错误或建议，欢迎提出PR请求。
