@@ -14,6 +14,8 @@
 
 搬瓦工默认安装的是CentOS，我把它换成了 ubuntu 16.04，毕竟比较熟悉。
 
+另外一个很好的地方是[Vultr](https://www.vultr.com/?ref=7513206)，同样也很便宜
+
 ## 安装 shadowsocks server
 
 shadowsocks server 的实现方法有C/C++, python, go等，这里我安装 C/C++ 版，这个比较稳定，用起来也很方便，在 ubuntu 下安装方法如下：
@@ -23,6 +25,8 @@ sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
 sudo apt update
 sudo apt install shadowsocks-libev
 ```
+
+如果是 Ubuntu 18.04 直接使用最后一条命令安装就行了。
 
 安装成功后会添加 ss-server 命令，接着就配置.json 文件：
 
