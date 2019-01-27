@@ -2,7 +2,3 @@
 > 最新发现的很详细的SSR安装教程，不过需要英文基础 [Tips For China SSR](https://www.tipsforchina.com/how-to-setup-a-fast-shadowsocks-server-on-vultr-vps-the-easy-way.html)，需要翻墙看😯.
 
 另外发现一个很好的管理服务器[Outline](https://github.com/Jigsaw-Code/outline-server)
-
-## 目录
-
-- [购买VPS](#%E8%B4%AD%E4%B9
