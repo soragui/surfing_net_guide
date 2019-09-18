@@ -12,4 +12,4 @@
 ```bash
 bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
 ```
-3. 然后安装，outline-manager 和 outline-client 就可以了。使用愉快！
+3. 然后安装，[outline-manager](https://github.com/Jigsaw-Code/outline-server/tree/master/src/server_manager) 和 [outline-client](https://github.com/Jigsaw-Code/outline-client) 就可以了。使用愉快！
