@@ -1,5 +1,5 @@
 > 记录自己搭建 shadowsocks 的过程
-> [OUTline 安装教程](https://soragui.com/2019/手动实现-shadowsocks-as-a-service/)
+> [OUTline 安装教程](https://soragui.com/手动实现-shadowsocks-as-a-service/)
 
 ## 最近发现打击力度有点大，后来测试发现自己搭建 shadowsocks 相关技术的都被墙了，而 outline 可以使用，不过客户端也需要使用 outline !
 
