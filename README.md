@@ -85,3 +85,35 @@ ulimit -n 51200
 ```
 
 最后重启系统即可，加速应该是会成功的，使用愉快！！
+
+## Linux 客户端安装
+首先就是编辑配置文件 /etc/shadowsocks/local.json
+```json
+{
+  "server": "代理服地址",
+  "server_port": "代理服端口",
+  "local_port": 1081,
+  "password": "代理服密码",
+  "timeout": 60,
+  "method": "chacha20-ietf-poly1305"
+}
+```
+接着就可以编辑systemd配置文件了
+```bash
+sudo vi /lib/systemd/system/shadowsocks-libev-local@.service
+```
+修改其中的ExecStart配置路经
+```json
+ExecStart=/usr/bin/ss-local -c /etc/shadowsocks-libev/local.json
+```
+
+然后，使用 systemctl 进行服务的启动和管理
+```bash
+#启动
+sudo systemctl start shadowsocks-libev-local@.
+#或 $ sudo service shadowsocks-libev-local@.service start
+#查看运行情况
+sudo systemctl status shadowsocks-libev-local@.
+#配置开机自启
+sudo systemctl enable shadowsocks-libev-local@.
+```
