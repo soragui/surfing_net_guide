@@ -8,7 +8,12 @@
 ## 打击力度超级大，刚搭建的不到一天就寿终正寝，好了，只好在有需要的时候再搭建吧，shadowsocks-as-a-server。
 
 1. 去 [vultr](https://www.vultr.com/?ref=7513206)申请，部署服务器，地址选美国比较好。在安装 之前 务必 Ping 一下。
-2. ssh 进入，使用如下命令安装 
+2. 安装docker:
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+```
+3. ssh 进入，使用如下命令安装 
 ```bash
 bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
 ```
